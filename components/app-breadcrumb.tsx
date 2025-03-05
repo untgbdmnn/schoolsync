@@ -1,5 +1,6 @@
 import React from 'react'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from './ui/breadcrumb'
+import { SetTitle } from './setHelmet'
 
 interface AppBreadcrumbProps {
     page: string
@@ -11,6 +12,7 @@ interface AppBreadcrumbProps {
 export default function AppBreadcrumb({ page, parent, parentLink, showBreadcrumb }: AppBreadcrumbProps) {
     return (
         <div>
+            <SetTitle pageTitle={page + " - Schoolsync"} />
             <div className='flex flex-col items-start'>
                 <h1 className='text-xs'>Schoolsync Admin Panel</h1>
                 <h1 className='font-bold text-3xl'>{page}</h1>
